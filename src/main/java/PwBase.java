@@ -9,7 +9,7 @@ public class PwBase {
 	public  void invokeApp(String url, String Description) {
 		
 		Playwright playwright = Playwright.create();
-		Browser browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setChannel("chrome"));	
+		Browser browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true).setChannel("chrome"));	
 		BrowserContext browsercontext=browser.newContext();
 		Page page = browsercontext.newPage();
 		page.navigate(url);
